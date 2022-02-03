@@ -6,15 +6,21 @@ function App() {
   return (
     <div className="App">
       {
-        [1,2,3,4].map((el)=>{
-         return <h1>Hello World {el}</h1>
+        [{name:"Kiran",age:26},{name:"Sakshi",age:25}].map((el)=>{
+         return (
+            Userdata(el)
+         )
         })
       }
-      
-      <h2>My age is {age}</h2>
-      <input/>
     </div>
   );
+}
+
+function Userdata(el){
+  return (           <div>
+    <h1>Hello {el.name}</h1>
+    <h2>your age is {el.age}</h2>
+  </div>)
 }
 
 export default App;
